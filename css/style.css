@@ -25,15 +25,15 @@ body {
 }
 
 .placaMaeCard {
+    z-index: 999;
     background-color: transparent;
-    width: 300px;
+    width: 300px;  
     height: 300px;
     perspective: 1000px;
     border-radius: 20px;
 }
 
 .flip-card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -67,4 +67,8 @@ body {
 img {
     border-radius: 20px;
     width: 100%;
+}
+
+.placaMaeCard:hover {
+    cursor: pointer;
 }
