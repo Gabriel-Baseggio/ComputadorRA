@@ -2,64 +2,76 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-    <title>Scanner de Computador</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  <title>Scanner de Computador</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="modal no-scan">
-        <h2>Computador</h2>
-        <p>
-            Máquina utilizada para rodar um sistema operacional como o Windows e poder utilizar de programas.
-        </p>
-        <p>
-            Especificações:
-        </p>
-        <ul>
-            <li>Placa mãe;</li>
-            <li>Processador;</li>
-            <li>Disco rígido;</li>
-            <li>4x memória RAM;</li>
-            <li>Fonte;</li>
-            <li>Placa de vídeo;</li>
-            <li>2x Cooler.</li>
-        </ul>
-    </div>
+  <div class="modal no-scan">
+    <h2>Computador</h2>
+    <p>
+      Máquina utilizada para rodar um sistema operacional como o Windows e poder utilizar de programas.
+    </p>
+    <p>
+      Especificações:
+    </p>
+    <ul>
+      <li>Placa mãe;</li>
+      <li>Processador;</li>
+      <li>Disco rígido;</li>
+      <li>4x memória RAM;</li>
+      <li>Fonte;</li>
+      <li>Placa de vídeo;</li>
+      <li>2x Cooler.</li>
+    </ul>
+  </div>
 
-    <div class="placaMaeCard" style="display: none;">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="assets/placaMae.jpg" alt="Placa mãe">
-          </div>
-          <div class="flip-card-back">
-            <h1>Placa mãe</h1> 
-            <p>Architect & Engineer</p>
-          </div>
-        </div>
+  <div class="flip-card" id="placaMae">
+    <div class="flip-card-inner" id="placaMaeInner">
+      <div class="flip-card-front">
+        <img src="assets/placaMae.jpg" alt="Placa mãe">
       </div>
+      <div class="flip-card-back">
+        <h1>Placa mãe</h1>
+        <p>Architect & Engineer</p>
+      </div>
+    </div>
+  </div>
 
-    <a-scene
-        mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/band-example/band.mind;"
-        color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
-        device-orientation-permission-ui="enabled: false">
+  <div class="flip-card" id="memoriaRam">
+    <div class="flip-card-inner" id="memoriaRamInner">
+      <div class="flip-card-front">
+        <img src="assets/memoriaRam.jpg" alt="Memória Ram">
+      </div>
+      <div class="flip-card-back">
+        <h1>Memória RAM</h1>
+        <p>DX|XD</p>
+      </div>
+    </div>
+  </div>
 
-        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  <a-scene
+    mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/band-example/band.mind;"
+    color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
 
-        <a-entity mindar-image-target="targetIndex: 0" id="target1">
-            
-        </a-entity>
-        <a-entity mindar-image-target="targetIndex: 1">
-            
-        </a-entity>
-    </a-scene>
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <script type="text/javascript" src="js/script.js"></script>
+    <a-entity mindar-image-target="targetIndex: 0" id="target1">
+
+    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 1">
+
+    </a-entity>
+  </a-scene>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

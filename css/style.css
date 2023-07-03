@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron:wght@700&display=swap');
 
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .modal {
     background-color: #FAFAFA;
     font-family: "Montserrat", sans-serif;
@@ -20,27 +28,25 @@
     display: none;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.placaMaeCard {
+.flip-card {
+    display: none;
+    position: absolute;
     z-index: 999;
-    background-color: transparent;
-    width: 300px;  
-    height: 300px;
+    aspect-ratio: 3 / 4;
+    width: 85%;
+    height: auto;
+    max-width: 400px;
     perspective: 1000px;
     border-radius: 20px;
 }
 
 .flip-card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
 }
 
 .flip-card-front,
@@ -54,8 +60,10 @@ body {
 }
 
 .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2980b9;
 }
 
 .flip-card-back {
@@ -65,10 +73,11 @@ body {
 }
 
 img {
-    border-radius: 20px;
-    width: 100%;
+    border-radius: 10px;
+    width: 90%;
+    height: auto;
 }
 
-.placaMaeCard:hover {
+.flip-card:hover {
     cursor: pointer;
 }

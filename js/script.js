@@ -1,26 +1,25 @@
 document.getElementById("target1").addEventListener("targetFound", () => {
-    document.getElementsByClassName("placaMaeCard")[0].style.display = "block";
+    document.getElementById("placaMae").style.display = "block";
 })
 
 document.getElementById("target1").addEventListener("targetLost", () => {
-    document.getElementsByClassName("placaMaeCard")[0].style.display = "none";
+    document.getElementById("placaMae").style.display = "none";
 })
 
-function nMostrar() {
-    document.getElementsByClassName("placaMaeCard")[0].style.display = "none";
-}
-
-function mostrar() {
-    document.getElementsByClassName("placaMaeCard")[0].style.display = "block";
-}
-
 let x = 0;
-document.getElementsByClassName("placaMaeCard")[0].addEventListener('click', () => {
-    let placaMaeCard = document.getElementsByClassName("placaMaeCard")[0];
+function virarCard(card) {
     if (x % 2 == 0) {
-        placaMaeCard.style.transform = "rotateY(180deg)";
+        card.style.transform = "rotateY(180deg)";
     } else {
-        placaMaeCard.style.transform = "rotateY(0deg)";
+        card.style.transform = "rotateY(0deg)";
     }
     x++;
+}
+
+document.getElementById("placaMae").addEventListener('click', () => {
+    virarCard(document.getElementById("placaMaeInner"));
+})
+
+document.getElementById("memoriaRam").addEventListener('click', () => {
+    virarCard(document.getElementById("memoriaRamInner"));
 })
