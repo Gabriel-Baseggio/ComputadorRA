@@ -21,7 +21,7 @@ document.getElementById("pcAbertoTarget").addEventListener("targetLost", () => {
 
 
 for (let i = 0; i < document.getElementsByClassName("flip-card").length; i++) {
-    for (let  j = i * 2; j < i * 2 + 2; j++) {
+    for (let j = i * 2; j < i * 2 + 2; j++) {
         document.getElementsByClassName("botao-fechar")[j].addEventListener('click', () => {
             document.getElementsByClassName("flip-card")[i].style.display = "none";
             virarCard(document.getElementsByClassName("flip-card-inner")[i]);
@@ -107,3 +107,15 @@ document.getElementById("botao-placavideo").addEventListener('click', () => {
     document.getElementById("placaVideo").style.display = "block";
 });
 
+
+
+function mostrarPcAberto() {
+    document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => {
+        document.getElementById("botao-aberto").style.display = "block";
+    })
+
+    document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => {
+        document.getElementById("botao-aberto").style.display = "block";
+    })
+
+}
