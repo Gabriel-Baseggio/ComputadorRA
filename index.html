@@ -13,23 +13,38 @@
 </head>
 
 <body>
-  <div class="modal no-scan">
-    <h2>Computador</h2>
-    <p>
-      Máquina utilizada para rodar um sistema operacional como o Windows e poder utilizar de programas.
-    </p>
-    <p>
-      Especificações:
-    </p>
-    <ul>
-      <li>Placa mãe;</li>
-      <li>Processador;</li>
-      <li>Disco rígido;</li>
-      <li>4x memória RAM;</li>
-      <li>Fonte;</li>
-      <li>Placa de vídeo;</li>
-      <li>2x Cooler.</li>
-    </ul>
+  <div class="flip-card" id="pcFechado">
+    <div class="flip-card-inner" id="pcFechadoInner">
+      <div class="flip-card-front">
+        <div class="div-fechar">
+          <p>Clique para girar</p><button class="botao-fechar">X</button>
+        </div>
+        <div class="imgDiv">
+          <img src="assets/pcAberto.jpg" alt="Computador aberto">
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <div class="div-fechar">
+          <p>Clique para girar</p><button class="botao-fechar">X</button>
+        </div>
+        <div class="flip-card-back-inner">
+          <h1>Computador</h1>
+          <h3>O que é?</h3>
+          <p>Máquina utilizada para rodar um sistema operacional como o Windows e poder utilizar de programas.
+          </p>
+          <h3>Especificações</h3>
+          <ul>
+            <li>Placa-mãe: OptiPlex 7010 Lga1155</li>
+            <li>Processador: I7-3770</li>
+            <li>4x memória RAM: 4GB DDR3</li>
+            <li>Disco rígido: Seagate 500GB</li>
+            <li>Placa de vídeo: Quadro FX 1700</li>
+            <li>Fonte: Delta 300w</li>
+            <li>2x Cooler</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="botao-aberto">
@@ -208,7 +223,8 @@
     device-orientation-permission-ui="enabled: false">
 
     <a-assets>
-      <img id="card" src="assets/pcAberto.png" />
+      <img id="pcAbertoImg" src="assets/pcAberto.jpg" />
+      <img id="pcAbertoCorImg" src="assets/pcAbertoCor.jpg" />
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -216,12 +232,17 @@
     <a-entity mindar-image-target="targetIndex: 0" id="fonteTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 1" id="hdTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 2" id="memoriaRamTarget"></a-entity>
+
     <a-entity mindar-image-target="targetIndex: 3" id="pcAbertoTarget">
-      <a-plane src="#pcAbertoImg" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+      <a-plane src="#pcAbertoCorImg" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
     </a-entity>
+
     <a-entity mindar-image-target="targetIndex: 4" id="placaMaeTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 5" id="placaVideoTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 6" id="processadorTarget"></a-entity>
+
+    <a-entity mindar-image-target="targetIndex: 7" id="pcFechadoTarget"></a-entity>
+
   </a-scene>
 
   <script type="text/javascript" src="js/script.js"></script>
