@@ -9,7 +9,7 @@ function virarCard(card) {
 
 // PC Aberto
 document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => {
-    document.getElementById("botao-aberto").style.display = "block";
+    document.getElementById("botao-aberto").style.display = "flex";
 })
 
 document.getElementById("pcAbertoTarget").addEventListener("targetLost", () => {
