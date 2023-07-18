@@ -14,6 +14,7 @@ document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => 
 })
 
 document.getElementById("pcAbertoTarget").addEventListener("targetLost", () => {
+    noneEmTudo();
     document.getElementById("botao-aberto").style.display = "none";
 })
 
