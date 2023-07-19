@@ -53,6 +53,7 @@
       <button class="botao-pc-aberto" id="botao-processador">Processador</button>
       <button class="botao-pc-aberto" id="botao-fonte">Fonte</button>
     </div>
+    <img id="pcAbertoCorImg" src="assets/pcAbertoCor.jpg" />
     <div id="botoes-aberto-dentro">
       <button class="botao-pc-aberto" id="botao-hd">Disco Rígido</button>
       <button class="botao-pc-aberto" id="botao-memoriaram">Memória Ram</button>
@@ -222,19 +223,13 @@
     renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
 
-    <a-assets>
-      <img id="pcAbertoCorImg" src="assets/pcAbertoCor.jpg" />
-    </a-assets>
-
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <a-entity mindar-image-target="targetIndex: 0" id="fonteTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 1" id="hdTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 2" id="memoriaRamTarget"></a-entity>
 
-    <a-entity mindar-image-target="targetIndex: 3" id="pcAbertoTarget">
-      <a-plane src="#pcAbertoCorImg" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
-    </a-entity>
+    <a-entity mindar-image-target="targetIndex: 3" id="pcAbertoTarget"></a-entity>
 
     <a-entity mindar-image-target="targetIndex: 4" id="placaMaeTarget"></a-entity>
     <a-entity mindar-image-target="targetIndex: 5" id="placaVideoTarget"></a-entity>

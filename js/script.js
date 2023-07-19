@@ -13,11 +13,6 @@ document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => 
     document.getElementById("botao-aberto").style.display = "flex";
 })
 
-document.getElementById("pcAbertoTarget").addEventListener("targetLost", () => {
-    noneEmTudo();
-    document.getElementById("botao-aberto").style.display = "none";
-})
-
 // Botões de remover
 for (let i = 0; i < document.getElementsByClassName("flip-card").length; i++) {
     for (let j = i * 2; j < i * 2 + 2; j++) {
