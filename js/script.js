@@ -13,6 +13,12 @@ document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => 
     document.getElementById("botao-aberto").style.display = "flex";
 })
 
+// Fechar PC Aberto
+document.getElementById("botoes-fechar").addEventListener("click", () => {
+    noneEmTudo();
+    document.getElementById("botao-aberto").style.display = "none";
+})
+
 // Botões de remover
 for (let i = 0; i < document.getElementsByClassName("flip-card").length; i++) {
     for (let j = i * 2; j < i * 2 + 2; j++) {
@@ -122,7 +128,6 @@ document.getElementById("pcFechadoTarget").addEventListener("targetFound", () =>
 document.getElementById("pcFechado").addEventListener('click', () => {
     virarCard(document.getElementById("pcFechadoInner"));
 })
-
 
 // Função para dar display none em todos os cards
 function noneEmTudo() {
