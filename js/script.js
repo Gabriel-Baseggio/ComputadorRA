@@ -13,6 +13,11 @@ document.getElementById("pcAbertoTarget").addEventListener("targetFound", () => 
     document.getElementById("botao-aberto").style.display = "flex";
 })
 
+document.getElementById("pcAbertoIconeTarget").addEventListener("targetFound", () => {
+    noneEmTudo();
+    document.getElementById("botao-aberto").style.display = "flex";
+})
+
 // Fechar PC Aberto
 document.getElementById("botoes-fechar").addEventListener("click", () => {
     noneEmTudo();
@@ -35,6 +40,11 @@ document.getElementById("placaMaeTarget").addEventListener("targetFound", () => 
     document.getElementById("placaMae").style.display = "block";
 })
 
+document.getElementById("placaMaeIconeTarget").addEventListener("targetFound", () => {
+    noneEmTudo()
+    document.getElementById("placaMae").style.display = "block";
+})
+
 document.getElementById("placaMae").addEventListener('click', () => {
     virarCard(document.getElementById("placaMaeInner"));
 })
@@ -46,6 +56,11 @@ document.getElementById("botao-placamae").addEventListener('click', () => {
 
 // Processador
 document.getElementById("processadorTarget").addEventListener("targetFound", () => {
+    noneEmTudo()
+    document.getElementById("processador").style.display = "block";
+})
+
+document.getElementById("processadorIconeTarget").addEventListener("targetFound", () => {
     noneEmTudo()
     document.getElementById("processador").style.display = "block";
 })
@@ -65,6 +80,12 @@ document.getElementById("fonteTarget").addEventListener("targetFound", () => {
     document.getElementById("fonte").style.display = "block";
 })
 
+document.getElementById("fonteIconeTarget").addEventListener("targetFound", () => {
+    noneEmTudo();
+    console.log("achou a fonte");
+    document.getElementById("fonte").style.display = "block";
+})
+
 document.getElementById("fonte").addEventListener('click', () => {
     virarCard(document.getElementById("fonteInner"));
 })
@@ -77,6 +98,12 @@ document.getElementById("botao-fonte").addEventListener('click', () => {
 // HD
 document.getElementById("hdTarget").addEventListener("targetFound", () => {
     noneEmTudo()
+    document.getElementById("hd").style.display = "block";
+})
+
+document.getElementById("hdIconeTarget").addEventListener("targetFound", () => {
+    noneEmTudo();
+    console.log("achou o HD");
     document.getElementById("hd").style.display = "block";
 })
 
@@ -95,6 +122,11 @@ document.getElementById("memoriaRamTarget").addEventListener("targetFound", () =
     document.getElementById("memoriaRam").style.display = "block";
 })
 
+document.getElementById("memoriaRamIconeTarget").addEventListener("targetFound", () => {
+    noneEmTudo()
+    document.getElementById("memoriaRam").style.display = "block";
+})
+
 document.getElementById("memoriaRam").addEventListener('click', () => {
     virarCard(document.getElementById("memoriaRamInner"));
 })
@@ -106,6 +138,11 @@ document.getElementById("botao-memoriaram").addEventListener('click', () => {
 
 // Placa de Vídeo
 document.getElementById("placaVideoTarget").addEventListener("targetFound", () => {
+    noneEmTudo()
+    document.getElementById("placaVideo").style.display = "block";
+})
+
+document.getElementById("placaVideoIconeTarget").addEventListener("targetFound", () => {
     noneEmTudo()
     document.getElementById("placaVideo").style.display = "block";
 })
