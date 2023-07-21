@@ -19,7 +19,11 @@ document.getElementById("pcAbertoIconeTarget").addEventListener("targetFound", (
 })
 
 // Fechar PC Aberto
-document.getElementById("botoes-fechar").addEventListener("click", () => {
+document.querySelectorAll(".fechar-botoes > *")[0].addEventListener("click", () => {
+    noneEmTudo();
+    document.getElementById("botao-aberto").style.display = "none";
+})
+document.querySelectorAll(".fechar-botoes > *")[1].addEventListener("click", () => {
     noneEmTudo();
     document.getElementById("botao-aberto").style.display = "none";
 })
