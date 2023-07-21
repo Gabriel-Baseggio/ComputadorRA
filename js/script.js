@@ -82,7 +82,6 @@ document.getElementById("fonteTarget").addEventListener("targetFound", () => {
 
 document.getElementById("fonteIconeTarget").addEventListener("targetFound", () => {
     noneEmTudo();
-    console.log("achou a fonte");
     document.getElementById("fonte").style.display = "block";
 })
 
@@ -103,7 +102,6 @@ document.getElementById("hdTarget").addEventListener("targetFound", () => {
 
 document.getElementById("hdIconeTarget").addEventListener("targetFound", () => {
     noneEmTudo();
-    console.log("achou o HD");
     document.getElementById("hd").style.display = "block";
 })
 
